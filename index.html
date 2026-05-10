@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Dearest Shairyl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">🌓</button>
+    <div class="background-hearts" id="hearts-container"></div>
+
+    <div id="login-screen" class="container">
+        <div class="glass-card">
+            <h1 class="title">Hello Beautiful...</h1>
+            <p class="subtitle">Before we proceed, tell me...</p>
+            <div class="input-group">
+                <label for="nameInput">What is your full name?</label>
+                <input type="text" id="nameInput" placeholder="Enter your name here..." autocomplete="off">
+                <button id="enterBtn">Enter</button>
+            </div>
+            <p id="errorMessage" class="error-msg"></p>
+        </div>
+    </div>
+
+    <div id="main-content" class="container hidden">
+        <div class="glass-card main-card">
+            <div class="heart-icon">❤️</div>
+            <h1 class="love-title">For Shairyl Banzon Casili</h1>
+            <div class="message-content">
+                <p>My dearest Shairyl,</p>
+                <p>Every moment with you feels like a beautiful dream come true. You are the light in my life and the beat in my heart.</p>
+                <p>I created this little space just for you, to remind you of how much you mean to me. You are amazing, beautiful, and I’m so lucky to have you.</p>
+                <p>Thank you for always taking care of me, for loving and supporting me so much through everything. Your presence makes my life happier, brighter, and more complete. I truly appreciate every little thing you do for me, and I’ll always treasure all the memories we’ve shared together.</p>
+                <p><strong>Happy one year, my lovee. ❤️</strong></p>
+                <p>No matter what happens, I hope we continue growing together, loving each other, and making more unforgettable memories.</p>
+                <p class="signature">With all my love,</p>
+                <p class="sender-name">June Arnel E. Aranda</p>
+            </div>
+            <div class="interactive-part">
+                <button id="surpriseBtn">Click for a Surprise!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Romantic Popup Modal -->
+    <div id="loveModal" class="modal hidden">
+        <div class="glass-card modal-content">
+            <h2 class="title">Wait! One more thing...</h2>
+            <p class="subtitle">Do you love June?</p>
+            <div class="modal-buttons">
+                <button id="yesBtn">Yes! ❤️</button>
+                <button id="noBtn">No 🥺</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
