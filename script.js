@@ -41,16 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const moveButton = () => {
-        const modalContent = document.querySelector('.modal-content');
-        
-        // Calculate bounds within the modal content
-        const padding = 15; // Slightly less padding for mobile
-        const maxX = modalContent.clientWidth - noBtn.offsetWidth - padding;
-        const maxY = modalContent.clientHeight - noBtn.offsetHeight - padding;
-        
-        // Random position within the card, ensuring it doesn't overlap labels too much
-        const randomX = Math.max(padding, Math.random() * maxX);
-        const randomY = Math.max(padding, Math.random() * maxY);
+        const buttonArea = document.querySelector('.modal-buttons');
+        const padding = 8;
+        const yesBottom = yesBtn.offsetTop + yesBtn.offsetHeight;
+        const minY = Math.min(yesBottom + 8, buttonArea.clientHeight - noBtn.offsetHeight - padding);
+        const maxX = Math.max(padding, buttonArea.clientWidth - noBtn.offsetWidth - padding);
+        const maxY = Math.max(minY, buttonArea.clientHeight - noBtn.offsetHeight - padding);
+        const randomX = padding + Math.random() * (maxX - padding);
+        const randomY = minY + Math.random() * (maxY - minY);
         
         noBtn.style.position = 'absolute';
         noBtn.style.left = `${randomX}px`;
